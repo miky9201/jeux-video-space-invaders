@@ -4,7 +4,6 @@ Ce projet consistera à créer un jeu en ligne en JavaScript dans lequel 2 joueu
 Aperçu du jeu navigateur au tour par tour
 Aperçu du jeu navigateur au tour par tour
 
-Il n'est pas nécessaire d'avoir votre code en ligne dans le cadre de ce projet. Cependant, si vous souhaitez construire votre portfolio professionnel et héberger le projet en ligne, notre partenaire 1&1 IONOS offre 2 mois d'hébergement gratuits aux étudiants pour toute souscription à un pack d'hébergement (plus d'infos).
 Etape 1 : génération de la carte
 
 Commencez par générer aléatoirement la carte du jeu. Chaque case peut être soit :
