@@ -1,0 +1,274 @@
+/* Reset css */
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6
+,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,
+dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,
+b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,
+tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,
+figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,
+time,mark,audio,video { 
+    margin: 0; 
+    padding: 0; 
+    border: 0; 
+    font-size: 100%; 
+    font: inherit; 
+    vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display: block;
+}
+
+body { 
+    background-color: #111;
+    line-height: 1;
+}
+
+ol,ul { 
+    list-style: none;
+}
+
+blockquote,q { 
+    quotes: none;
+}
+
+table { 
+    border-collapse: collapse; 
+    border-spacing: 0;
+}
+
+
+/* Polices */
+@font-face {
+    font-family: "Phosphate";
+    src: url("../font/Phosphate.ttf") format("truetype");
+
+    font-family: "RetroGaming";
+    src: url("../font/RetroGaming.ttf") format("truetype");
+   }
+
+
+/* Général settings */
+
+h1, h2, h3 {
+    font-family: "Phosphate", sans-serif;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #eee;
+}
+
+h3 {
+    margin-top: 30px;
+    font-size: 1.1em;
+    color: #eee;
+}
+
+p {
+    font-family: "RetroGaming", sans-serif;
+    color: #eee;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+
+.turn {
+    font-size: 1.2em;
+    padding: 5px;
+    animation: flash 1.5s linear infinite;
+}
+
+/*Eléments du jeu*/
+/*Main*/
+
+.main {
+    background-color: #111;
+    padding: 4px;
+}
+
+.main-title {
+    font-family: "Phosphate", sans-serif;
+    font-size: 2.5em;
+    text-align: center;
+    color: rgb(255, 0, 76); 
+    margin: 20px 0px;
+}
+
+/*Player Boards*/
+
+.board {
+    background-color: #000;
+    border: rgb(255, 0, 76) solid 1px;
+    width: 210px;
+    min-height: 30px;
+    position: absolute;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 5px;
+}
+
+#player1 {
+    left: 0px; 
+    border-radius: 0px 40px 40px 0px;
+    border-left: none;
+}
+
+#player2 {
+    right: 0px; 
+    border-radius: 40px 0px 0px 40px;
+    border-right: none;
+}
+
+.player-img {
+    width: 100px;
+    margin: 10px 0px;
+}
+
+.life-points-container {
+    width: 80%;
+    background-color: #333;
+    border-radius: 30px;
+}
+
+.life-points {
+    height: 15px;
+    background-color: rgb(5, 153, 0);
+    border-radius: 30px;
+    width: 100%;
+}
+
+.pv {
+    margin-top: -12.5px;
+}
+
+.arme-img-container{
+    margin-top: 5px;
+    margin-bottom: 10px;
+    width: 70px;
+    height: 70px;
+    background-color: #eee;
+    border-radius: 10px;
+}
+
+.arme-img {
+    width: 60px;
+    display: block;
+    margin: auto;
+}
+
+.player-choices{
+    margin-top: 30px;
+}
+
+.player-choices p {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.player-button {
+    font-family: "Phosphate", sans-serif;
+    background-color: rgb(255, 0, 76); 
+    border: none;
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}
+
+/*Map*/
+
+.map-container {
+    margin: auto;
+}
+
+.map {
+    display: grid;
+    grid-template-columns: 42px 42px 42px 42px 42px 42px 42px 42px 42px 42px;
+    grid-gap: 0px;
+    background-color: #eee;
+}
+
+.case {
+    margin: 0;
+    padding: 0;
+    width: 42px;
+    height: 42px;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    border-left: 2px solid #111;
+    border-right: 2px solid #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casevide {
+    background-color: #eee;
+}
+
+.obstacle {
+    background-color: rgb(255, 0, 76); 
+}
+
+.case-move {
+    background-color: #888;
+}
+
+.new-game {
+    font-family: "Phosphate", sans-serif;
+    background-color: rgb(255, 0, 76); 
+    color: black;
+    text-decoration: none;
+    padding: 5px;
+    display: block;
+    width: 110px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/*Players*/
+
+#player1-img, #player2-img {
+    width: 40px;
+}
+
+/*Armes*/
+
+.arme-map {
+    width: 25px;
+}
+
+
+/*Media Queries*/
+@media (max-width: 860px) {
+    #player1, #player2 {
+        top: 600px;
+    }
+}
+
+/*Keyframes*/
+
+@keyframes flash {
+    0% {
+        color: #111;
+        text-shadow: none;
+    }
+    40% {
+        color: rgb(255, 0, 76); 
+        text-shadow: 0 0 7px rgb(255, 0, 76)  0 0 50px red;
+    }
+    60% {
+        color: rgb(255, 0, 76); 
+        text-shadow: 0 0 7px rgb(255, 0, 76)  0 0 50px red;
+    }
+    100% {
+        color: #111;
+        text-shadow: none;
+    }
+}

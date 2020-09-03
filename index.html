@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jeux Vidéo</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+        <div class="main">
+            <h1 class="main-title">Space Invaders 6000</h1>
+
+            <div class="map-container"></div>
+
+            <a class="new-game" href="#">New Game !</a>
+            <div id="player1" class="board">
+                <h2>Player 1</h2>
+                <img class="player-img" src="assets/images/player1.png" alt="perso-red">
+                <div class="life-points-container">
+                    <div class="life-points"></div>
+                </div>
+                <p class="pv"></p>
+                <h3>Arme</h3>
+                <div class="arme-img-container">
+                    
+                </div>
+                <p class="degats">10 damage points</p>
+                <div class="player-choices">
+                    <p class="turn">Your Turn</p>
+                    <button class="player-button attack">Attack</button>
+                    <button class="player-button defense">Defense</button>
+                </div>
+            </div>
+            <div id="player2" class="board">
+                <h2>Player 2</h2>
+                <img class="player-img" src="assets/images/player2.png" alt="perso-blue">
+                <div class="life-points-container">
+                    <div class="life-points"></div>
+                </div>
+                <p class="pv"></p>
+                <h3>Arme</h3>
+                <div class="arme-img-container">
+                    
+                </div>
+                <p class="degats">10 damage points</p>
+                <div class="player-choices">
+                    <p class="turn">Your Turn</p>
+                    <button class="player-button attack">Attack</button>
+                    <button class="player-button defense">Defense</button>
+                </div>
+            </div>
+        </div>
+        <iframe src="assets/sound/space-invaders.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe>     
+        <script src="assets/jquery/jquery-3.5.1.js"></script>   
+        
+        <script src="assets/js/main.js"></script> 
+        <script src="classes/map.js"></script>
+        <script src="classes/player.js"></script>  
+        <script src="classes/arme.js"></script>
+        <script src="classes/function.js"></script>
+    </body>
+</html>
